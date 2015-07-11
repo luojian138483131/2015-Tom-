@@ -8,20 +8,61 @@
 
 #import "ViewController.h"
 
+
+
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *tom;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+//**Tom动画方法*/
+
+-(void)tomanimation:(NSString*)img count:(int)count
+{
+    
+    // 如果正在动画，直接返回
+    if([self.tom isAnimating])
+        return;
+    NSMutableArray*arrayM=[NSMutableArray array];//动态数组
+    for (int i=0; i<count; i++) {
+        
+        NSString*imageName=[NSString stringWithFormat:@"%@_%02d.jpg",img,i];
+        
+        UIImage*image=[UIImage imageNamed:imageName];
+        [arrayM addObject:image];
+    }
+    
+    
+    [self.tom setAnimationImages:arrayM];
+    
+    
+    
+    
+    
+    //设置动画时长
+    [self.tom setAnimationDuration:arrayM.count*0.07];
+    
+    [self.tom setAnimationRepeatCount:1];
+    
+    [self.tom startAnimating];
+
+}
+- (IBAction)head
+{
+    
+    
+    [self tomanimation:@"knockout" count:81];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)drink
+{
+
+    [self tomanimation:@"drink" count:81];
 }
 
 @end
