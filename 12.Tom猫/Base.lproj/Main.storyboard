@@ -37,6 +37,15 @@
                                     <action selector="head" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dKv-j6-0cl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As6-Ao-dEU">
+                                <rect key="frame" x="106" y="518" width="46" height="40"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightfoot" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hxj-rv-YYW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
