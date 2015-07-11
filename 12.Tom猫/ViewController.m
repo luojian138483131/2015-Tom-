@@ -23,6 +23,12 @@
 
 -(void)tomanimation:(NSString*)img count:(int)count
 {
+    
+    NSlog(@"456");
+    
+    
+    
+    
     NSLog(@"123");
     // 如果正在动画，直接返回
     if([self.tom isAnimating])
